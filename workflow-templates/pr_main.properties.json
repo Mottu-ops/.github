@@ -1,0 +1,9 @@
+{
+    "name": "Abertura de PR para main",
+    "description": "Workflow base para abrir PR para main, precisa definir a solution e source (caso o projeto use) para rodar os testes",
+    "iconName": "dotnet-icon",
+    "categories": [
+        "continuous-integration",
+        "C#"
+    ]
+}
