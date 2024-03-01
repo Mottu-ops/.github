@@ -1,0 +1,9 @@
+{
+    "name": "CI/CD Pipeline NodeJS",
+    "description": "CI/CD Pipeline NodeJS realizando Scan com Sonarqube, Scan de vulnerabilidades e Abertura de PR para K8S",
+    "iconName": "nodejs-icon",
+    "categories": [
+        "continuous-integration",
+        "NodeJS"
+    ]
+}

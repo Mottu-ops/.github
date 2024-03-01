@@ -1,0 +1,15 @@
+name: CICD Pipeline
+on: 
+  pull_request:
+    branches:    
+      - main
+
+jobs:
+  Pipeline:
+    uses: mottu-ops/pipeline-core/.github/workflows/container-nodejs-kubernetes.yaml@v2
+    with:
+      namespace: <NAMESPACE>
+      app_name: <APPNAME> # o mesmo que você quer que seja o nome do seu deployment no k8s                                   
+      bu: <BU> # no formato "rental-bu, delivery-bu, etc"
+      df_path: <DOCKERFILE-PATH> # (opcional) caso seu Dockerfile não esteja na raiz do projeto
+    secrets: inherit
