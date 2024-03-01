@@ -1,0 +1,9 @@
+{
+    "name": "CI/CD Pipeline .NET",
+    "description": "CI/CD Pipeline .NET, realizando testes na Solution, Scan com Sonarqube, Scan de vulnerabilidades, Abertura de PR para K8S",
+    "iconName": "dotnet-icon",
+    "categories": [
+        "continuous-integration",
+        "C#"
+    ]
+}
