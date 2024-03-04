@@ -13,9 +13,10 @@ jobs:
     uses: mottu-ops/pipeline-core/.github/workflows/container-dotnet-kubernetes.yaml@v2
     with:
       dotnetSln: "<PATH_TO_SOLUTION>.sln" # necessario para o build e execução de testes
-      dotnetSources: '-s "https://nuget.pkg.github.com/Mottu-ops/index.json" -s "https://api.nuget.org/v3/index.json"' # altere conforme a necessidade do seu projeto, esse cava sendo o padrão dos principais projetos
-      namespace: <NAMESPACE>
-      app_name: <APPNAME> # o mesmo que você quer que seja o nome do seu deployment no k8s                                   
+      dotnetSources: '-s "https://nuget.pkg.github.com/Mottu-ops/index.json" -s "https://api.nuget.org/v3/index.json"' # (opcional) altere conforme a necessidade do seu projeto, esse cava sendo o padrão dos principais projetos
+      sonarExclusions: "<PATH_TO_EXCLUDE>,<PATH_TO_EXCLUDE_2>" # (opcional) Caso queira exluir pastas ou arquivos de serem analisados no sonarqube, separados por ,
+      app_name: <APPNAME> # o mesmo nome do seu deployment no k8s    
+      namespace: <NAMESPACE> # o mesmo nome do seu deployment no k8s                              
       bu: <BU> # no formato "rental-bu, delivery-bu, etc"
       df_path: <DOCKERFILE-PATH> # (opcional) caso seu Dockerfile não esteja na raiz do projeto
     secrets: inherit
