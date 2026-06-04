@@ -6,10 +6,12 @@ on:
     branches:
       - main
       - develop
+      - homolog
   pull_request:
     branches:    
       - main
       - develop
+      - homolog
 
 jobs:
   Pipeline:
